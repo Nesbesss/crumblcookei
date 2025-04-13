@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kourtney's Flourless Chocolate Cake Cookie | Crumbl Copycat Recipe</title>
+    <style>
+        /* CSS Reset and Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f9f5f3;
+            padding-bottom: 2rem;
+        }
+        
+        /* Typography */
+        h1, h2, h3, h4 {
+            font-family: 'Georgia', serif;
+            margin-bottom: 1rem;
+            color: #3a2618;
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+            text-align: center;
+            margin: 2rem 0;
+            color: #2d1e12;
+        }
+        
+        h2 {
+            font-size: 1.8rem;
+            border-bottom: 2px solid #d4a76a;
+            padding-bottom: 0.5rem;
+            margin-top: 2rem;
+        }
+        
+        h3 {
+            font-size: 1.4rem;
+            margin-top: 1.5rem;
+        }
+        
+        p {
+            margin-bottom: 1rem;
+        }
+        
+        /* Layout */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+        
+        header {
+            background-color: #3a2618;
+            color: #fff;
+            padding: 2rem 0;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        
+        header h1 {
+            color: #fff;
+            margin: 0;
+        }
+        
+        header p {
+            text-align: center;
+            font-style: italic;
+            color: #f1e3d3;
+            max-width: 800px;
+            margin: 1rem auto;
+        }
+        
+        .recipe-intro {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 2rem;
+        }
+        
+        .recipe-meta {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+        
+        .meta-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: #fff;
+            padding: 1rem;
+            border-radius: 8px;
+            min-width: 120px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        
+        .meta-item i {
+            font-size: 1.5rem;
+            color: #d4a76a;
+            margin-bottom: 0.5rem;
+        }
+        
+        .meta-item span {
+            font-weight: bold;
+        }
+        
+        .meta-item small {
+            color: #666;
+        }
+        
+        /* Two-column layout for ingredients and instructions on larger screens */
+        .recipe-content {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2rem;
+        }
+        
+        @media (min-width: 768px) {
+            .recipe-content {
+                grid-template-columns: 1fr 2fr;
+            }
+        }
+        
+        /* Ingredients */
+        .ingredients {
+            background-color: #fff;
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        
+        .ingredients ul {
+            list-style-type: none;
+            margin-left: 0;
+        }
+        
+        .ingredients li {
+            padding: 0.5rem 0;
+            border-bottom: 1px dashed #e0e0e0;
+            display: flex;
+            align-items: baseline;
+        }
+        
+        .ingredients li:last-child {
+            border-bottom: none;
+        }
+        
+        .ingredients li::before {
+            content: "•";
+            color: #d4a76a;
+            font-weight: bold;
+            margin-right: 0.5rem;
+        }
+        
+        /* Instructions */
+        .instructions {
+            background-color: #fff;
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        
+        .instructions ol {
+            margin-left: 1.5rem;
+        }
+        
+        .instructions li {
+            margin-bottom: 1rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px dashed #e0e0e0;
+        }
+        
+        .instructions li:last-child {
+            border-bottom: none;
+        }
+        
+        /* Equipment */
+        .equipment ul {
+            list-style-type: none;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin: 1rem 0;
+        }
+        
+        .equipment li {
+            background-color: #f1e3d3;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+        }
+        
+        /* Images */
+        .recipe-image {
+            width: 100%;
+            max-width: 600px;
+            height: auto;
+            border-radius: 8px;
+            margin: 1rem auto;
+            display: block;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        
+        .image-gallery {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin: 2rem 0;
+        }
+        
+        .gallery-image {
+            width: 100%;
+            max-width: 300px;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+        
+        .gallery-image:hover {
+            transform: scale(1.03);
+        }
+        
+        /* Nutrition */
+        .nutrition {
+            background-color: #fff;
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            margin: 2rem 0;
+        }
+        
+        .nutrition-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1rem 0;
+        }
+        
+        .nutrition-table th, .nutrition-table td {
+            padding: 0.75rem;
+            text-align: left;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        
+        .nutrition-table th {
+            background-color: #f1e3d3;
+            color: #3a2618;
+        }
+        
+        .nutrition-table tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        
+        /* Notes and Tips */
+        .notes {
+            background-color: #f1e3d3;
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin: 2rem 0;
+        }
+        
+        .notes h3 {
+            color: #3a2618;
+        }
+        
+        /* Print Button */
+        .print-button {
+            display: block;
+            margin: 2rem auto;
+            padding: 0.75rem 1.5rem;
+            background-color: #d4a76a;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        
+        .print-button:hover {
+            background-color: #c39355;
+        }
+        
+        /* Footer */
+        footer {
+            text-align: center;
+            margin-top: 3rem;
+            padding: 1rem;
+            color: #666;
+            font-size: 0.9rem;
+        }
+        
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+            
+            h2 {
+                font-size: 1.5rem;
+            }
+            
+            .recipe-meta {
+                gap: 1rem;
+            }
+            
+            .meta-item {
+                min-width: 100px;
+                padding: 0.75rem;
+            }
+        }
+        
+        /* Print styles */
+        @media print {
+            body {
+                background-color: #fff;
+                font-size: 12pt;
+            }
+            
+            header, footer, .print-button {
+                display: none;
+            }
+            
+            .container {
+                width: 100%;
+                max-width: none;
+            }
+            
+            .recipe-content {
+                display: block;
+            }
+            
+            .ingredients, .instructions, .notes, .nutrition {
+                box-shadow: none;
+                margin: 1rem 0;
+                page-break-inside: avoid;
+            }
+            
+            h1 {
+                font-size: 24pt;
+            }
+            
+            h2 {
+                font-size: 18pt;
+            }
+            
+            h3 {
+                font-size: 14pt;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Kourtney's Flourless Chocolate Cake Cookie</h1>
+            <p>A refined copycat recipe for Crumbl's gluten-friendly, refined sugar-free dessert with a crispy exterior and soft, gooey interior.</p>
+        </div>
+    </header>
+    
+    <main class="container">
+        <section class="recipe-intro">
+            <img src="https://www.coloradoan.com/gcdn/authoring/authoring-images/2025/04/07/USAT/82979563007-kourtneys-flourless-chocolate-cake-dessert-styled-1.jpg" alt="Crumbl Kourtney's Flourless Chocolate Cake Cookie" class="recipe-image">
+            
+            <div class="recipe-meta">
+                <div class="meta-item">
+                    <i>⏱️</i>
+                    <span>Prep Time</span>
+                    <small>30 minutes</small>
+                </div>
+                <div class="meta-item">
+                    <i>🔥</i>
+                    <span>Cook Time</span>
+                    <small>11-13 minutes</small>
+                </div>
+                <div class="meta-item">
+                    <i>⌛</i>
+                    <span>Total Time</span>
+                    <small>1 hour</small>
+                </div>
+                <div class="meta-item">
+                    <i>🍪</i>
+                    <span>Yield</span>
+                    <small>8-10 cookies</small>
+                </div>
+                <div class="meta-item">
+                    <i>📊</i>
+                    <span>Difficulty</span>
+                    <small>Intermediate</small>
+                </div>
+            </div>
+        </section>
+        
+        <div class="recipe-content">
+            <section class="ingredients">
+                <h2>Ingredients</h2>
+                
+                <h3>For the Flourless Chocolate Cookie Base:</h3>
+                <ul>
+                    <li>225g high-quality dark chocolate (70% cocoa), finely chopped</li>
+                    <li>115g unsalted butter</li>
+                    <li>3 large eggs (150g without shells), at room temperature</li>
+                    <li>85g honey</li>
+                    <li>60g unsweetened applesauce</li>
+                    <li>5ml (1 tsp) vanilla extract</li>
+                    <li>1.25g (1/4 tsp) salt</li>
+                    <li>35g unsweetened cocoa powder, sifted</li>
+                    <li>2.5g (1/2 tsp) gluten-free baking powder</li>
+                </ul>
+                
+                <h3>For the Dark Chocolate Glaze:</h3>
+                <ul>
+                    <li>115g dark chocolate (70% cocoa), finely chopped</li>
+                    <li>60ml heavy cream</li>
+                    <li>21g (1 tbsp) honey</li>
+                    <li>15g unsalted butter</li>
+                </ul>
+                
+                <h3>For Garnish:</h3>
+                <ul>
+                    <li>24-30 fresh raspberries (3 per cookie)</li>
+                </ul>
+                
+                <h3>Equipment</h3>
+                <div class="equipment">
+                    <ul>
+                        <li>Digital kitchen scale</li>
+                        <li>Mixing bowls</li>
+                        <li>Double boiler</li>
+                        <li>Whisk</li>
+                        <li>Silicone spatula</li>
+                        <li>Baking sheet</li>
+                        <li>Parchment paper</li>
+                        <li>Ice cream scoop</li>
+                        <li>Wire cooling rack</li>
+                    </ul>
+                </div>
+            </section>
+            
+            <section class="instructions">
+                <h2>Instructions</h2>
+                
+                <h3>For the Flourless Chocolate Cookie Base:</h3>
+                <ol>
+                    <li><strong>Prepare:</strong> Preheat oven to 175°C. Line a baking sheet with parchment paper.</li>
+                    <li><strong>Melt Chocolate:</strong> Set up a double boiler by placing a heatproof bowl over a saucepan with 2-3cm of simmering water (ensure the bowl doesn't touch the water). Add the 225g dark chocolate and 115g butter to the bowl. Melt together, stirring occasionally until completely smooth. Remove from heat and let cool for 5 minutes.</li>
+                    <li><strong>Mix Wet Ingredients:</strong> In a large bowl, whisk together the 3 eggs (150g), 85g honey, 60g applesauce, and 5ml vanilla extract until well combined and slightly frothy.</li>
+                    <li><strong>Combine Mixtures:</strong> While whisking continuously, slowly pour the melted chocolate mixture into the egg mixture. Whisk until fully incorporated and glossy. This gradual addition prevents the eggs from cooking from the heat of the chocolate.</li>
+                    <li><strong>Add Dry Ingredients:</strong> Sift the 35g cocoa powder, 1.25g salt, and 2.5g baking powder directly over the chocolate mixture. Fold gently with a silicone spatula until just combined and no dry streaks remain. Do not overmix to maintain the light texture.</li>
+                    <li><strong>Form Cookies:</strong> Using an ice cream scoop or 60ml measuring cup, portion the batter onto the prepared baking sheet, leaving about 5cm between each cookie. The batter will be quite soft, resembling cake batter more than traditional cookie dough. Aim for 8-10 cookies total.</li>
+                    <li><strong>Bake:</strong> Bake at 175°C for 11-13 minutes. The cookies are done when the edges are set but the center is still slightly soft when gently pressed. The tops may develop small cracks, which is normal and desirable for the authentic texture.</li>
+                    <li><strong>Cool:</strong> Allow the cookies to cool on the baking sheet for 5 minutes to set. Then carefully transfer to a wire rack to cool completely before glazing.</li>
+                </ol>
+                
+                <h3>For the Dark Chocolate Glaze:</h3>
+                <ol>
+                    <li><strong>Heat Cream:</strong> In a small saucepan, heat 60ml heavy cream over medium-low heat until it just begins to simmer at the edges (do not boil).</li>
+                    <li><strong>Make Glaze:</strong> Place 115g chopped dark chocolate in a heatproof bowl. Pour the hot cream over the chocolate and let sit undisturbed for 1 minute to allow the chocolate to melt. Add 21g honey and 15g butter, then gently stir until smooth and glossy. If any chocolate pieces remain unmelted, place the bowl over warm water and stir until completely smooth.</li>
+                    <li><strong>Cool Slightly:</strong> Allow the glaze to cool for about 5 minutes until it thickens slightly but is still pourable. The ideal temperature for glazing is 32-35°C.</li>
+                </ol>
+                
+                <h3>Assembly:</h3>
+                <ol>
+                    <li><strong>Glaze Cookies:</strong> Place cooled cookies on a wire rack with parchment paper underneath to catch drips. Spoon approximately 1-2 tablespoons (15-30ml) of chocolate glaze over each cookie, allowing it to drip down the sides naturally. Use the back of the spoon to guide the glaze if needed.</li>
+                    <li><strong>Garnish:</strong> While the glaze is still soft, place three fresh raspberries on top of each cookie, gently pressing them into the glaze to secure.</li>
+                    <li><strong>Set:</strong> Allow the glaze to set for at least 15 minutes at room temperature.</li>
+                    <li><strong>Serve:</strong> For the authentic Crumbl experience, warm each cookie in the microwave for 10-15 seconds before serving.</li>
+                </ol>
+            </section>
+        </div>
+        
+        <section class="image-gallery">
+            <img src="https://betches.s3.amazonaws.com/app/uploads/2025/04/08134125/KourtneysFlourlessChocolateCakeDessert_Styled_6-1.jpg" alt="Kourtney's Flourless Chocolate Cake Cookie close-up" class="gallery-image">
+            <img src="https://simpleseasonal.com/wp-content/uploads/2016/01/flourless-chocolate-cake-raspberry-sauce.jpg" alt="Flourless Chocolate Cake with Raspberry Garnish" class="gallery-image">
+        </section>
+        
+        <section class="notes">
+            <h2>Texture Notes</h2>
+            <p>To achieve the signature texture (crispy exterior with soft, gooey interior):</p>
+            <ul>
+                <li>Do not overbake the cookies. They should appear slightly underdone in the center when removed from the oven.</li>
+                <li>The cookies will continue to set as they cool on the baking sheet.</li>
+                <li>The texture should resemble a cross between a brownie and a cake - moist with a slightly crisp exterior.</li>
+                <li>If the cookies seem too soft after cooling, refrigerate them for 30 minutes before glazing.</li>
+                <li>For maximum contrast between the crisp exterior and gooey interior, serve slightly warm.</li>
+            </ul>
+            
+            <h3>Storage Instructions</h3>
+            <ul>
+                <li>Store cookies in an airtight container at room temperature for up to 2 days.</li>
+                <li>For longer storage, refrigerate for up to 5 days. Allow to come to room temperature or warm slightly before serving.</li>
+                <li>These cookies can be frozen without the glaze and raspberries for up to 1 month. Thaw completely before glazing and garnishing.</li>
+            </ul>
+            
+            <h3>Recipe Notes</h3>
+            <ul>
+                <li>This recipe yields 8-10 cookies, depending on the size of your scoop.</li>
+                <li>For a truly gluten-free version, ensure all ingredients (especially cocoa powder and baking powder) are certified gluten-free.</li>
+                <li>The quality of chocolate significantly impacts the final flavor. Use the best quality dark chocolate you can find with approximately 70% cocoa content.</li>
+                <li>If the glaze becomes too thick to pour, gently warm it by placing the bowl over warm water and stirring until it reaches the desired consistency.</li>
+                <li>For a less sweet version, reduce the honey in the cookie base to 60g.</li>
+                <li>This recipe is refined sugar-free, using only honey as a sweetener, just like the original Crumbl version.</li>
+            </ul>
+        </section>
+        
+        <section class="nutrition">
+            <h2>Nutritional Information</h2>
+            <p>Values per cookie, based on a yield of 9 cookies:</p>
+            
+            <table class="nutrition-table">
+                <thead>
+                    <tr>
+                        <th>Nutrient</th>
+                        <th>Amount per Cookie</th>
+                        <th>% Daily Value*</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Calories</strong></td>
+                        <td>430 kcal</td>
+                        <td>21.5%</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Total Fat</strong></td>
+                        <td>32.6g</td>
+                        <td>41.8%</td>
+                    </tr>
+                    <tr>
+                        <td>— Saturated Fat</td>
+                        <td>20.6g</td>
+                        <td>103.0%</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Total Carbohydrates</strong></td>
+                        <td>30.4g</td>
+                        <td>11.1%</td>
+                    </tr>
+                    <tr>
+                        <td>— Dietary Fiber</td>
+                        <td>5.8g</td>
+                        <td>20.7%</td>
+                    </tr>
+                    <tr>
+                        <td>— Sugars</td>
+                        <td>17.1g</td>
+                        <td>34.2%</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Protein</strong></td>
+                        <td>6.2g</td>
+                        <td>12.4%</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Sodium</strong></td>
+                        <td>35mg</td>
+                        <td>1.5%</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Potassium</strong></td>
+                        <td>318mg</td>
+                        <td>6.8%</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Calcium</strong></td>
+                        <td>52mg</td>
+                        <td>4.0%</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Iron</strong></td>
+                        <td>3.9mg</td>
+                        <td>21.7%</td>
+                    </tr>
+                </tbody>
+            </table>
+            <p><small>*Percent Daily Values are based on a 2,000 calorie diet.</small></p>
+            <p><small>Note: This cookie is gluten-friendly and contains no refined sugar, making it a healthier alternative to traditional cookies.</small></p>
+        </section>
+        
+        <button class="print-button" onclick="window.print()">Print Recipe</button>
+    </main>
+    
+    <footer>
+        <div class="container">
+            <p>Crumbl Kourtney's Flourless Chocolate Cake Cookie Recipe | Last Updated: April 13, 2025</p>
+            <p><small>This recipe is a copycat version of Crumbl's limited edition cookie. For the authentic experience, visit your local Crumbl store.</small></p>
+        </div>
+    </footer>
+
+    <script>
+        // Simple script to test if print functionality works
+        document.addEventListener('DOMContentLoaded', function() {
+            const printButton = document.querySelector('.print-button');
+            printButton.addEventListener('click', function() {
+                window.print();
+            });
+        });
+    </script>
+</body>
+</html>
